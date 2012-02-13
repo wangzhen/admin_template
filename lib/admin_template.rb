@@ -111,3 +111,4 @@ module AdminTemplate
   end
 
 end
+ActionController::Base.send(:include, AdminTemplate)
