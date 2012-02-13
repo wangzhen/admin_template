@@ -9,11 +9,12 @@ Gem::Specification.new do |s|
   s.date = %q{2012-02-13}
   s.description = %q{This admin_template plugin provides a foundation for securely managing user.}
   s.email = %q{vwangzhen@gmail.com}
-#  s.extra_rdoc_files = ["README.markdown"]
+  #  s.extra_rdoc_files = ["README.markdown"]
   s.files = ["README", "Rakefile",
     "lib/admin_template.rb"]
   s.has_rdoc = true
-  s.homepage = %q{https://wangzhen@github.com/wangzhen/admin_template.git}
+#  s.homepage = %q{https://wangzhen@github.com/wangzhen/admin_template.git}
+  s.homepage    =    'http://rubygems.org/gems/admin_template'
   s.rdoc_options = ["--main", "README.makdown"]
   s.require_paths = ["lib"]
   s.rubygems_version = %q{1.8.6}
