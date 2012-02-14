@@ -1,0 +1,14 @@
+<div class="LoginBox">
+  <div class="inner">
+    <%= form_tag admin_sessions_path do -%>
+        <p class="LoginInfo">用户名</p>
+        <%= text_field_tag 'name', @name, :class=>"info" %>
+        <p class="LoginInfo">密码</p>
+        <%= password_field_tag 'password', nil, :class=>"info" %>
+        <div class="section">
+          <%= check_box_tag 'remember_me', '1', @remember_me ,:class => 'check'%>记住登录信息
+          <%= submit_tag '登录', :class=>'btn2' %>
+        </div>
+    <% end -%>
+  </div>
+</div>

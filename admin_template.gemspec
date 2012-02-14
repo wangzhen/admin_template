@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |s|
   s.name = %q{admin_template}
-  s.version = "1.0.3"
+  s.version = "1.0.2"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Anthony Wang", "Rick Olson"]
@@ -16,7 +16,7 @@ Gem::Specification.new do |s|
 #  s.homepage = %q{https://wangzhen@github.com/wangzhen/admin_template.git}
   s.homepage    =    'http://rubygems.org/gems/admin_template'
   s.rdoc_options = ["--main", "README.makdown"]
-  s.require_path = 'lib'
+  s.require_paths = ["lib"]
   s.rubygems_version = %q{1.8.6}
   s.summary = %q{admin controller template }
 

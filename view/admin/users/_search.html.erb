@@ -1,0 +1,12 @@
+<% form_for :search, :url => admin_users_path(:search => params[:search]),
+  :html => {:id => 'search'} do |f|%>
+
+    <div class="SearchArea2">
+      <p class="title">
+        关键字
+        <%= text_field_tag :keyword ,params[:keyword], :class => "typeA"  %>
+      </p>
+  
+      <%= f.submit t('labels.search'), :class => "BottomW2" %>
+    </div>
+<%- end %>
