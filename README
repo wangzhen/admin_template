@@ -1,6 +1,6 @@
 https://rubygems.org/gems/admin_template
 
-插件目的让您不工时间搭建自己的后台
+插件目的让您不花时间搭建自己的后台
 
 本插件要做内容
 1.初始化admininstator表
@@ -11,6 +11,12 @@ https://rubygems.org/gems/admin_template
 
 
 ----欢迎大家来修改代码提交自己的想法
+
+插件已实现功能
+1.简化控制器代码
+
+插件正在开发功能
+1.简化视图代码
  
 
 
