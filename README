@@ -1,5 +1,36 @@
+https://rubygems.org/gems/admin_template
+
+插件目的让您不工时间搭建自己的后台
+
+本插件要做内容
+1.初始化admininstator表
+2.初始化后台登陆
+3.初始化后台控制器
+4.简化控制器代码
+5.简化视图代码
+
+
+----欢迎大家来修改代码提交自己的想法
+ 
+
+
+
+本插件依赖插件
+后能搜索是用的meta_search
+
 this gem depend on the meta_search
 
 plesse run
 
+
 gem install meta_search
+gem install admin_template
+
+
+class Admin::AdministratorsController < ActionController::Base
+  init_action
+end
+
+只需在控制器中加入
+init_action
+即可初始化你的控制器代码
