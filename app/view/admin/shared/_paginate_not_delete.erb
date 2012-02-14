@@ -1,0 +1,14 @@
+
+<div class="section2">
+  <div class="OperationArea">
+    <!--
+    <a class="batch delselect_all" href="javascript:void(0)"><%= t('labels.delete_select') %></a>
+    -->
+  </div>
+  <div class="OperationArea">
+    <% unless objects.blank? %>
+      <%= paginate(objects) %>
+      <%=  raw "<span class='info'>当前显示 #{(objects.current_page - 1) * objects.limit_value + 1 }-  #{(objects.current_page - 1) * objects.limit_value + objects.count } 条，共#{objects.total_count}条</span>" %>
+    <% end %>
+  </div>
+</div>

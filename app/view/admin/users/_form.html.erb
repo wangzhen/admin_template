@@ -1,0 +1,86 @@
+<%= form_for [:admin, instance_variable_get("@#{controller_name.singularize}")], :url => path, :html => {:multipart => true ,:id => 'form'} do |form| %>
+  <div class="LeftNew">
+    <div class="Inner">
+      <%=render :partial => "/admin/shared/errors" ,:locals =>{:model => instance_variable_get("@#{controller_name.singularize}") }  %>
+      <div class="AcceNew">
+
+        <dl>
+          <dt><%= controller_name.classify.constantize.human_attribute_name(:email) %></dt>
+          <dd>
+            <%= form.text_field   :email , :class => 'style1' %>
+          </dd>
+        </dl>
+
+        <dl>
+          <dt><%= controller_name.classify.constantize.human_attribute_name(:password) %></dt>
+          <dd>
+            <%= form.password_field   :password , :class => 'style1' %>
+          </dd>
+        </dl>
+        <dl>
+          <dt><%= controller_name.classify.constantize.human_attribute_name(:password_confirmation) %></dt>
+          <dd>
+            <%= form.password_field   :password_confirmation , :class => 'style1' %>
+          </dd>
+        </dl>
+
+        <dl>
+          <dt><%= controller_name.classify.constantize.human_attribute_name(:mobile) %></dt>
+          <dd>
+            <%= form.text_field   :mobile , :class => 'style1' %>
+          </dd>
+        </dl>
+
+        <dl>
+          <dt><%= controller_name.classify.constantize.human_attribute_name(:qq) %></dt>
+          <dd>
+            <%= form.text_field   :qq , :class => 'style1' %>
+          </dd>
+        </dl>
+
+        <dl>
+          <dt><%= controller_name.classify.constantize.human_attribute_name(:msn) %></dt>
+          <dd>
+            <%= form.text_field   :msn , :class => 'style1' %>
+          </dd>
+        </dl>
+        
+        <dl>
+          <dt><%= controller_name.classify.constantize.human_attribute_name(:sex) %></dt>
+          <dd>
+            <%= form.text_field   :sex , :class => 'style1' %>
+          </dd>
+        </dl>
+
+        <dl>
+          <dt><%= controller_name.classify.constantize.human_attribute_name(:auth_token) %></dt>
+          <dd>
+            <%= form.text_field   :auth_token , :class => 'style1' %>
+          </dd>
+        </dl>
+
+        <dl>
+          <dt><%= controller_name.classify.constantize.human_attribute_name(:auth_token) %></dt>
+          <dd>
+            <%= form.text_field   :password_reset_token , :class => 'style1' %>
+          </dd>
+        </dl>
+
+        <dl>
+          <dt><%= controller_name.classify.constantize.human_attribute_name(:auth_token) %></dt>
+          <dd>
+            <%= form.text_field   :password_reset_sent_at , :class => 'style1' %>
+          </dd>
+        </dl>
+
+
+      </div>
+      <div class="PostBtn">
+        <p>
+          <%= form.submit t('labels.save')  , :class=>"btnW2_search" %>
+        </p>
+        <br class="clear" />
+      </div>
+    </div>
+  </div>
+<% end %>

@@ -1,0 +1,1615 @@
+@charset "utf-8";
+/* CSS Document */
+
+body a {
+    outline: none;
+    blr: expression(this.onFocus=this.blur());
+}
+
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, textarea, p, blockquote, th, td {
+    border-color: #E3E3E5;
+    margin: 0;
+    padding: 0;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+fieldset, img {
+    border: 0;
+}
+
+address, caption, cite, code, dfn, em, th, var {
+    font-style: normal;
+    font-weight: normal;
+}
+
+dl, dt, dd, img, ul, ol, li {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    list-style: none;
+}
+
+caption, th {
+    text-align: left;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-size: 100%;
+    font-weight: normal;
+}
+
+q:before, q:after {
+    content: '';
+}
+
+abbr, acronym {
+    border: 0;
+}
+
+a {
+    text-decoration: none;
+    color: #24768c;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #d54e21;
+}
+
+a:hover img {
+    filter: alpha(opacity = 70);
+    -moz-opacity: 0.7;
+    -khtml-opacity: 0.7;
+    opacity: 0.7;
+}
+
+a img {
+    border: none;
+}
+
+.clear {
+    clear: both;
+}
+
+body {
+    font-family: Arial, "宋体";
+    font-size: 12px;
+    width: 100%;
+    height: 100%;
+}
+
+input, select, textarea {
+    font-family: Arial, "宋体";
+    font-size: 12px;
+}
+
+select {
+    font-family: Arial, "宋体";
+    font-size: 12px;
+}
+
+
+/*--COMMON--*/
+.Header {
+    width: 100%;
+    height: 80px;
+    background: url(/images/admin/header_bg.png) bottom repeat-x #eeeeee;
+    overflow: hidden;
+}
+
+.Header .LogoArea {
+    float: left;
+    display: inline;
+    margin: 0 0 0 15px;
+}
+
+.Header .LogoArea p.logo {
+    line-height: 80px;
+    float: left;
+}
+
+.Header .LogoArea p.logo img.yamaha {
+    margin: 5px 0 0 0;
+}
+
+.Header .LogoArea span.welcome {
+    line-height: 80px;
+    color: #bfbfbf;
+    margin: 0 0 0 20px;
+}
+
+.Header .LogoArea span.welcome strong {
+    color: #000;
+}
+
+.Header ul.Button {
+    float: right;
+    display: inline;
+    overflow: hidden;
+    margin: 25px 15px 0 0;
+}
+
+.Header ul.Button li {
+    float: left;
+    display: block;
+    margin: 0 0 0 10px;
+}
+
+.Header ul.Button li a {
+    background: url(/images/admin/btn_b4_bg.png) no-repeat;
+    width: 69px;
+    height: 25px;
+    text-align: center;
+    color: #FFF;
+    display: block;
+    line-height: 25px;
+}
+
+.Header ul.Button li a:hover {
+    text-decoration: none;
+    color: #d9d9d9;
+}
+
+.Wrapper {
+    margin: 15px 0 0 255px;
+    clear: both;
+    height: 100%;
+    padding: 0 0 50px 0;
+}
+
+.LeftNavi {
+    margin: 0 0 0 -240px;
+    position: relative;
+    width: 240px;
+    float: left;
+    padding: 0;
+}
+
+.LeftNavi .ListArea {
+    margin: 0 0 10px 0;
+    width: 222px;
+}
+
+.LeftNavi .ListArea p.Category {
+    width: 222px;
+    height: 34px;
+    _height: 32px;
+    background: url(/images/admin/leftnavi_category.jpg) no-repeat;
+    color: #FFF;
+    text-indent: 28px;
+    line-height: 36px;
+    _line-height: 32px;
+    font-weight: bold;
+    padding: 2px 0 0 0;
+    _padding: 4px 0 0 0;
+}
+
+.LeftNavi .ListArea ul {
+    border-left: 1px #e5e5e5 solid;
+    border-right: 1px #e5e5e5 solid;
+    width: 220px;
+}
+
+.LeftNavi .ListArea ul li.Level1 {
+    border-bottom: 1px #ececec solid;
+}
+
+.last {
+    border: none;
+}
+
+.LeftNavi .ListArea ul li.Level1 a.l1 {
+    display: block;
+    background: #f7f7f7 url(/images/admin/leftnavi_arrow.gif) no-repeat 13px 12px;
+    text-decoration: none;
+    height: 27px;
+    line-height: 29px;
+    text-indent: 26px;
+    border: 1px #FFF solid;
+    color: #666666;
+}
+
+.LeftNavi .ListArea ul li.Level1 a.l1:hover {
+    background: #dae5ea url(/images/admin/leftnavi_arrow_on.gif) no-repeat 13px 14px;
+}
+
+.LeftNavi .ListArea ul li.current a.l1 {
+    background: #dae5ea url(/images/admin/leftnavi_arrow_on.gif) no-repeat 13px 14px;
+    height: 28px;
+    line-height: 29px;
+    text-indent: 26px;
+    border: 1px #FFF solid;
+}
+
+.LeftNavi .ListArea ul.Level2 {
+    border-left: none;
+    border-right: none;
+}
+
+.LeftNavi .ListArea ul.Level2 li {
+    line-height: 27px;
+    border-bottom: 1px dotted #dcdcdc;
+}
+
+.LeftNavi .ListArea ul.Level2 li a {
+    display: block;
+    text-indent: 35px;
+    background: url(/images/admin/leftnavi_arrow2.png) no-repeat 25px 13px #FFF;
+    height: 29px;
+    font-weight: normal;
+    color: #999;
+}
+
+.LeftNavi .ListArea ul.Level2 li a:hover {
+    font-weight: bold;
+    color: #000;
+    text-decoration: none;
+}
+
+.LeftNavi .ListArea ul.Level2 li.on a, .LeftNavi .ListArea ul.Level1 ul li.on {
+    font-weight: bold;
+    color: #000;
+}
+
+.LeftNavi .ListArea ul.Level2 li.last {
+    border-bottom: 1px solid #FFF;
+}
+
+h3 {
+    font-weight: bold;
+    font-size: 14px;
+    color: #666;
+}
+
+h4 {
+    font-weight: bold;
+    font-size: 13px;
+    color: #666;
+}
+
+.SearchContents {
+    clear: both;
+    margin: 25px 0;
+}
+
+.SearchContents p {
+    margin: 10px 0 0 0;
+    color: #C00;
+}
+
+.Footer {
+    clear: both;
+    height: 30px;
+    width: 100%;
+    background: #424242;
+}
+
+.TagZone {
+    margin: 10px 0 25px 0;
+}
+
+.TagZone a {
+    text-decoration: underline;
+    white-space: nowrap;
+    margin: 0 10px 0 0;
+    line-height: 24px;
+}
+
+/*--LOGIN--*/
+.LoginBg {
+    background: #f7f5f6;
+}
+
+h1.logo {
+    width: 432px;
+    margin: 120px auto 0 auto;
+    text-align: center;
+}
+
+.ErrorBox {
+    width: 432px;
+    height: 40px;
+    line-height: 40px;
+    color: #32342f;
+    text-indent: 18px;
+    margin: 18px auto 0 auto;
+    border-radius: 3px 3px 3px 3px;
+    border-style: solid;
+    border-width: 1px;
+    border: 1px solid #cc0000;
+    background: #ffebe8;
+}
+
+.LoginBox {
+    margin: 0px auto 0 auto;
+    width: 458px;
+    height: 256px;
+    background: url(/images/admin/login_box_bg.png) no-repeat;
+    padding: 25px 0 0 0;
+}
+
+.LoginBox .inner {
+    width: 308px;
+    margin: 0 auto;
+}
+
+.LoginBox p.LoginInfo {
+    color: #666666;
+    margin: 20px 0 0 0;
+    line-height: 24px;
+}
+
+.LoginBox input.info {
+    width: 298px;
+    height: 32px;
+    background: #fbfbfb;
+    border: 1px #e0e0e0 solid;
+    display: block;
+    color: #666;
+    font-family: Arial;
+    padding: 1px 5px;
+}
+
+.LoginBox .section {
+    overflow: hidden;
+    margin: 18px 0 0 0;
+    color: #999999;
+}
+
+.LoginBox .section input.check {
+    margin: 3px 5px 0 0;
+}
+
+.LoginBox .section a.btn2 {
+    float: right;
+    display: inline;
+    background: url(/images/admin/btn_b2_bg.png);
+    width: 55px;
+    height: 26px;
+    line-height: 26px;
+    color: #FFF;
+    cursor: pointer;
+    text-align: center;
+}
+
+.LoginBox .section a:hover {
+    text-decoration: none;
+    color: #d9d9d9;
+}
+
+/*--BODY--*/
+.BodyContents {
+    width: 99%;
+    float: left;
+    display: inline;
+    overflow: hidden;
+}
+
+.BodyContents .LeftZone {
+    float: left;
+    display: inline;
+    width: 40%;
+}
+
+.BodyContents .RightZone {
+    float: right;
+    display: inline;
+    width: 60%;
+}
+
+.TitleArea {
+    overflow: hidden;
+    margin: 5px 0 15px 0;
+}
+
+.TitleArea h2 {
+    float: left;
+    display: inherit;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 24px;
+    margin: 0 10px 0 0;
+}
+
+.TitleArea .SearchArea {
+    float: right;
+    display: inline;
+    margin: 0;
+    overflow: hidden;
+}
+
+/*.TitleArea .SearchArea input{ float:left; border:none; background:url(/images/admin/searchbox.jpg) no-repeat; width:208px; height:21px; margin:0 5px 0 0; color:#666; font-family:Arial; padding:1px 5px; line-height:22px;}*/
+
+.MessageBox {
+    border-radius: 3px 3px 3px 3px;
+    border-style: solid;
+    border-width: 1px;
+    margin: 0 0 15px 0;
+    padding: 5px 8px;
+    background: #fffbcc;
+    border-color: #e6db55;
+    clear: both;
+}
+
+.btnW2 {
+    text-align: center;
+    float: left;
+}
+
+.btnW2 a {
+    color: #000;
+    line-height: 22px;
+    width: 45px;
+    height: 22px;
+    display: block;
+    background: url(/images/admin/btn_w2_bg.png) no-repeat;
+}
+
+.btnW2 a:hover {
+    text-decoration: none;
+    color: #999;
+}
+
+.btnW4 {
+    width: 60px;
+    height: 22px;
+    text-align: center;
+    line-height: 22px;
+    color: #000;
+    float: left;
+    display: inline;
+    background: url(/images/admin/btn_w4_bg.png) no-repeat;
+}
+
+.btnW4 a {
+    width: 60px;
+    height: 22px;
+    color: #000;
+    display: block;
+}
+
+.btnW4 a:hover {
+    text-decoration: none;
+    color: #999;
+}
+
+.btnW5 {
+    width: 80px;
+    height: 22px;
+    text-align: center;
+    line-height: 22px;
+    color: #000;
+    float: left;
+    display: inline;
+    background: url(/images/admin/btn_w5_bg.png) no-repeat;
+}
+
+.btnW5 a {
+    width: 80px;
+    height: 22px;
+    color: #000;
+    display: block;
+}
+
+.btnW5 a:hover {
+    text-decoration: none;
+    color: #999;
+}
+
+.CreateArea {
+    margin: 20px 0 0 10px;
+}
+
+.CreateArea label.itemA {
+    display: block;
+    padding: 0 0 0 2px;
+    margin: 25px 0 0 0;
+    color: #c0c0c0;
+}
+
+.CreateArea input.itemA {
+    border-radius: 4px 4px 4px 4px;
+    border-style: solid;
+    border-width: 1px;
+    width: 95%;
+    height: 22px;
+    padding: 3px 5px;
+    margin: 5px 0 0 0;
+    font-size: 12px;
+}
+
+.CreateArea textarea.itemA {
+    border-radius: 4px 4px 4px 4px;
+    border-style: solid;
+    border-width: 1px;
+    width: 95%;
+    height: 100px;
+    padding: 5px;
+    margin: 5px 0 0 0;
+    font-size: 12px;
+}
+
+.CreateArea label.itemB {
+    padding: 0 20px 0 2px;
+    color: #c0c0c0;
+}
+
+.CreateArea input.itemB {
+    margin: 0 5px 0 0;
+}
+
+.CreateArea .BtnZone {
+    margin: 30px 0 0 0;
+}
+
+.CreateArea select {
+    border-radius: 4px 4px 4px 4px;
+    border-style: solid;
+    border-width: 1px;
+    margin: 5px 0 0 0;
+    padding: 1px;
+}
+
+.AcceNew {
+}
+
+.AcceNew dl {
+    clear: both;
+    overflow: hidden;
+    margin: 0 0 25px 0;
+}
+
+.AcceNew dt {
+    width: 100px; color: #666666; font-size: 14px; margin: 0 0 8px 0;
+}
+
+
+.AcceNew dd .CheckArea {
+    border: 1px solid #E3E3E5;
+    border-radius: 4px 4px 4px 4px;
+    margin: 5px 0 0;
+    width: 95%;
+    padding: 2px 3px;
+}
+
+.AcceNew dd ul.LineupCheck {
+    overflow: hidden;
+    padding: 20px 20px 10px 20px;
+}
+
+.AcceNew dd ul.LineupCheck li {
+    float: left;
+    display: inline;
+    width: 175px;
+    margin: 0 20px 10px 0;
+}
+
+.AcceNew dd ul.LineupCheck input {
+    margin: 5px 5px 0 0;
+}
+
+.AcceNew dd input.style1 {
+    width: 95%;
+    border-radius: 4px 4px 4px 4px;
+    border-style: solid;
+    border-width: 1px;
+    font-size: 12px;
+    height: 22px;
+    margin: 5px 0 0;
+    padding: 2px 3px;
+}
+
+.AcceNew .LineupNew {
+    margin: 10px 0 10px 0;
+}
+
+.AcceNew .LineupNewArea {
+    display: none;
+    margin: 10px 0 0 0;
+    overflow: hidden;
+}
+
+.AcceNew .LineupNewArea input {
+    float: left;
+    border: 1px solid #E3E3E5;
+    border-radius: 4px 4px 4px 4px;
+    padding: 3px 2px;
+    width: 250px;
+    margin: 0 10px 0 0;
+}
+
+.AcceNew textarea {
+    width: 95%;
+    border-radius: 4px 4px 4px 4px;
+    border-style: solid;
+    border-width: 1px;
+    font-size: 12px;
+    height: 50px;
+    margin: 5px 0 0;
+    padding: 2px 3px;
+}
+
+.poststuff {
+    width: 100%;
+    clear: both;
+    margin: 15px 0 0 0;
+}
+
+.RightOperation {
+    clear: right;
+    display: block;
+    float: right;
+    position: relative;
+    width: 300px;
+}
+
+.LeftNew {
+    clear: left;
+    float: left;
+    margin-right: -300px;
+    width: 99%;
+    overflow: hidden;
+}
+
+.LeftNew .Inner {
+    margin-right: 300px;
+    _padding-right: 300px;
+    _margin-right: 0px;
+}
+
+input.NewTitle {
+    width: 99%;
+    display: block;
+    border-radius: 6px 6px 6px 6px;
+    border: solid 1px #f0f0f0;
+    font-size: 1.7em;
+    line-height: 100%;
+    outline: medium none;
+    padding: 3px 4px;
+    margin: 0 0 25px 0;
+    clear: both;
+    color: #CCC; /*-moz-box-sizing: border-box;*/
+}
+
+.LeftNew .ToolbarHeader {
+    overflow: hidden;
+    clear: both;
+    position: relative;
+    padding: 10px 0 5px 0;
+}
+
+.LeftNew .ToolbarHeader .Insert {
+    float: left;
+    display: inline;
+    line-height: 18px;
+    padding: 0 0 0 5px;
+}
+
+.LeftNew .ToolbarHeader .Insert img {
+    margin: 0 0 -4px 0;
+}
+
+.LeftNew .ToolbarHeader .Insert a {
+    margin: 0 0 0 10px;
+}
+
+.LeftNew .ToolbarHeader .TagButton {
+    white-space: nowrap;
+    float: right;
+    display: inline;
+    overflow: hidden;
+    position: absolute;
+    top: 3px;
+    right: 20px;
+    z-index: 1px;
+    _right: 400px;
+    _top: -4px;
+    z-index: 2px;
+    _width: 140px;
+}
+
+.LeftNew .ToolbarHeader .TagButton li {
+    float: left;
+    display: inline;
+    margin: 5px 5px 0 0;
+    border: 1px solid #dedede;
+    border-bottom: none;
+    background-color: #fff;
+    border-radius: 3px 3px 0 0;
+    text-align: center;
+    _width: 60px;
+}
+
+.LeftNew .ToolbarHeader .TagButton li a {
+    cursor: pointer;
+    height: 18px;
+    padding: 6px 10px 4px;
+    text-decoration: none;
+    display: block;
+    color: #ccc;
+}
+
+.LeftNew .ToolbarHeader .TagButton li a:hover {
+    color: #999;
+}
+
+.LeftNew .ToolbarHeader .TagButton li a.selected {
+    background-color: #DFDFDF;
+    color: #333333;
+    font-weight: bold;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);
+}
+
+.LeftNew .PreviewArea {
+    clear: both;
+    border: #f0f0f0 solid 1px;
+    border-top: none;
+    border-radius: 5px 5px 5px 5px;
+    _border: none;
+    background: #DFDFDF;
+}
+
+.LeftNew .IconArea {
+    /*background: url(/images/admin/ed-bg.gif) repeat-x left top */;
+    clear: both;
+    border-bottom: 1px solid #cdcdcd;
+}
+
+.LeftNew .IconArea .IconSet {
+    padding: 6px;
+}
+
+.LeftNew .EditArea {
+    width: 100%;
+    border-radius: 0 0 5px 5px;
+}
+
+/*.LeftNew textarea{ width:100%; height:500px; display:block; border:none; _border:#f0f0f0 1px solid;}*/
+.LeftNew .SourceArea {
+    clear: both;
+    border: #f0f0f0 solid 1px;
+    border-top: none;
+    border-radius: 5px 5px 5px 5px;
+    _border: none;
+    background: #DFDFDF;
+    display: none;
+}
+
+.RightOperation .PostBox {
+    width: 298px;
+    border: 1px solid #ececec;
+    border-radius: 6px 6px 6px 6px;
+    overflow: hidden;
+    margin: 0 0 20px 0;
+    padding: 0;
+}
+
+.RightOperation h4 {
+    background: url(/images/admin/ed-bg.gif) repeat-x left top;
+    text-shadow: 0 1px 0 #fff;
+    color: #666;
+    font-weight: bold;
+    padding: 8px 9px;
+    border-radius: 6px 6px 0 0;
+}
+
+.RightOperation .PostBox .BtnDraft {
+    float: left;
+    display: inline;
+    margin: 15px 0 0 8px;
+}
+
+.RightOperation .PostBox .BtnPreview {
+    float: left;
+    display: inline;
+    margin: 15px 8px 0 10px;
+}
+
+.RightOperation .PostBox .PostTime {
+    clear: both;
+    margin: 0 10px 0 10px;
+    padding: 10px 0 0 0;
+}
+
+.RightOperation .PostBox .PostTime a {
+    text-decoration: underline;
+    margin: 0 15px;
+}
+
+.RightOperation .PostBox .TimeSet {
+    overflow: hidden;
+    margin: 10px 10px 0 10px;
+    display: none;
+}
+
+.RightOperation .PostBox .TimeSet select {
+    border-radius: 4px 4px 4px 4px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #e1e1e1;
+    margin: 0 5px 0 0;
+    padding: 1px;
+    _padding: 0;
+}
+
+.RightOperation .PostBox .TimeSet input {
+    border-radius: 4px 4px 4px 4px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #e1e1e1;
+    margin: 0 5px 0 0;
+    padding: 1px;
+    _padding: 0;
+}
+
+.RightOperation .PostBox .TimeSetBtn {
+    overflow: hidden;
+    margin: 10px 0 0 0;
+    padding: 0 0 10px 0;
+}
+
+.RightOperation .PostBox .TimeSetBtn .Ok {
+    float: left;
+    display: inline;
+}
+
+.RightOperation .PostBox .TimeSetBtn span {
+    padding: 3px 0 0 0;
+    margin: 0 0 0 10px;
+    line-height: 20px;
+}
+
+.RightOperation .PostBox .TimeSetBtn span a {
+    text-decoration: underline;
+}
+
+.RightOperation .PostBox .PostBtn {
+    overflow: hidden;
+    text-align: right;
+    background: #f1f1f1;
+    padding: 10px;
+    margin: 15px 0 0 0;
+    _padding: 10px 10px 20px 10px;
+}
+
+.RightOperation .PostBox .PostBtn p {
+    float: right;
+    display: inline;
+}
+
+.RightOperation .PostBox .PostBtn span {
+    float: left;
+    display: inline;
+    margin: 7px 0 0 10px;
+}
+
+.RightOperation .PostBox .PostBtn span a {
+    color: #F00;
+    padding: 1px 2px;
+    border-bottom: 1px solid #F00;
+    text-decoration: none;
+}
+
+.RightOperation .PostBox .PostBtn span a:hover {
+    background: #F00;
+    color: #FFF;
+}
+
+.RightOperation .CatBox {
+    width: 298px;
+    border: 1px solid #ececec;
+    border-radius: 6px 6px 6px 6px;
+    overflow: hidden;
+    margin: 0 0 20px 0;
+    padding: 0 0 10px 0;
+}
+
+.RightOperation .CatBox .inner {
+    border: dotted 1px #ececec;
+    height: 150px;
+    overflow: auto;
+    margin: 10px;
+}
+
+.RightOperation .CatBox dl {
+    clear: both;
+    margin: 5px;
+    overflow: hidden;
+}
+
+.RightOperation .CatBox dt {
+    float: left;
+    display: inline;
+    clear: left;
+    padding: 5px 0 0 0;
+    _padding: 2px 0 0 0;
+}
+
+.RightOperation .CatBox dd {
+    float: left;
+    clear: right;
+    line-height: 24px;
+    margin: 0 0 0 5px;
+}
+
+.RightOperation .CatBox .CatNew {
+    clear: both;
+    margin: 10px 10px 10px 15px;
+}
+
+.RightOperation .CatBox .CatNew a {
+    text-decoration: underline;
+}
+
+.RightOperation .CatBox .CatNewArea {
+    margin: 5px 10px 0 15px;
+    padding: 0 0 10px 0;
+    overflow: hidden;
+    display: none;
+}
+
+.RightOperation .CatBox .CatNewArea input {
+    display: block;
+    border-radius: 3px 3px 3px 3px;
+    border: solid 1px #f0f0f0;
+    padding: 3px 2px;
+    width: 263px;
+}
+
+.RightOperation .CatBox .CatNewArea a {
+    display: block;
+    margin: 5px 0 0 0;
+}
+
+.RightOperation .CatBox .CatNewArea a:hover {
+    text-decoration: none;
+    color: #999;
+}
+
+.RightOperation .TagBox {
+    width: 298px;
+    border: 1px solid #ececec;
+    border-radius: 6px 6px 6px 6px;
+    overflow: hidden;
+    margin: 0 0 20px 0;
+    padding: 0 0 10px 0;
+}
+
+.RightOperation .TagBox .TagAdd {
+    overflow: hidden;
+    margin: 10px 10px 0 10px;
+}
+
+.RightOperation .TagBox .TagAdd input {
+    border-radius: 3px 3px 3px 3px;
+    border: solid 1px #f0f0f0;
+    padding: 3px 2px;
+    width: 180px;
+    float: left;
+}
+
+.RightOperation .TagBox .TagAdd a {
+    margin: 1px 0 0 10px;
+}
+
+.RightOperation .TagBox .TagAdd a:hover {
+    text-decoration: none;
+    color: #999;
+}
+
+.RightOperation .TagBox .hint {
+    margin: 5px 12px;
+    color: #999;
+    clear: both;
+}
+
+.RightOperation .TagBox .FavoriteBtn {
+    clear: both;
+    margin: 10px 10px 10px 15px;
+}
+
+.RightOperation .TagBox .FavoriteBtn a {
+    text-decoration: underline;
+}
+
+.RightOperation .TagBox .tagchecklist {
+    font-size: 12px;
+    margin: 0 5px 0 25px;
+    overflow: hidden;
+}
+
+.RightOperation .TagBox .tagchecklist span {
+    cursor: default;
+    display: block;
+    float: left;
+    font-size: 11px;
+    line-height: 1.8em;
+    margin-right: 25px;
+    white-space: nowrap;
+}
+
+.RightOperation .TagBox .tagchecklist span a {
+    background: url(/images/admin/xit.gif) no-repeat left;
+    _background: url(/images/admin/xit.gif) no-repeat left 0;
+    cursor: pointer;
+    display: block;
+    float: left;
+    height: 10px;
+    margin: 4px 0 0 -12px;
+    _margin: 2px 0 0 -12px;
+    overflow: hidden;
+    position: absolute;
+    text-indent: -9999px;
+    width: 10px;
+    color: #666;
+}
+
+.RightOperation .TagBox .tagchecklist span a:hover {
+    background: url(/images/admin/xit.gif) no-repeat right;
+}
+
+.RightOperation .TagBox .TagArea {
+    border: dotted 1px #ececec;
+    border-radius: 3px 3px 3px 3px;
+    margin: 10px;
+    padding: 3px;
+    word-spacing: 3px;
+    display: none;
+}
+
+.RightOperation .TagBox .TagArea a {
+    margin: 0 8px 0 0;
+    line-height: 19px;
+    text-decoration: underline;
+}
+
+.RightOperation .ThumBox {
+    width: 298px;
+    border: 1px solid #ececec;
+    border-radius: 6px 6px 6px 6px;
+    overflow: hidden;
+    margin: 0 0 20px 0;
+    padding: 0 0 10px 0;
+}
+
+.RightOperation .ThumBox .ThumSet {
+    margin: 10px 10px 10px 15px;
+}
+
+.RightOperation .ThumBox .ThumSet a {
+    text-decoration: underline;
+}
+
+.RightOperation .ThumBox .ThumUp {
+    overflow: hidden;
+    margin: 0 0 0 15px;
+    padding: 0 0 10px 0;
+    display: none;
+}
+
+.RightOperation .ThumBox .ThumUp .PicSelect {
+    overflow: hidden;
+}
+
+.RightOperation .ThumBox .ThumUp a {
+    margin: 0 10px 0 0;
+}
+
+.RightOperation .ThumBox .ThumUp a:hover {
+    text-decoration: none;
+    color: #999;
+}
+
+.RightOperation .ThumBox .ThumUp .PicArea {
+    width: 150px;
+    height: 150px;
+    border: dotted 1px #ececec;
+    clear: both;
+    margin: 5px 0 10px 0;
+    background: #CCC
+}
+
+.MgTop25 {
+    margin-top: 25px;
+    clear: both;
+}
+
+/*--LIST--*/
+.ListContents {
+}
+
+.ListContents table {
+    margin: 5px 0 10px 0;
+    width: 100%;
+}
+
+.ListContents th {
+    background: #dddddd;
+    padding: 10px 10px;
+    text-align: left;
+    font-weight: bold;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);
+    font-size: 13px;
+    background: -moz-linear-gradient(center bottom, #D7D7D7, #E4E4E4) repeat scroll 0 0 transparent;
+    border: 1px solid #e3e3e3;
+}
+
+.ListContents td {
+    background: #fff;
+    padding: 10px;
+    text-align: left;
+    line-height: 19px;
+}
+
+.ListContents td.Blue {
+    background: #f1f1f1;
+    padding: 10px;
+    text-align: left;
+}
+
+.ListContents .lineL {
+    border-left: 1px solid #eeeeee;
+}
+
+.ListContents .lineR {
+    border-right: 1px solid #eeeeee;
+}
+
+.ListContents .lineB {
+    border-bottom: 1px solid #fff;
+}
+
+.ListContents .lineT {
+    border-top: 1px solid #cccccc;
+}
+
+.ListContents td a {
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.ListContents td a:hover {
+    text-decoration: none;
+}
+
+.ListContents td img {
+    margin: 0 15px 0 0;
+}
+
+.ListContents th.check-column {
+    width: 2%;
+}
+
+.ListContents th.id-column {
+    width: 2%;
+    white-space: nowrap;
+}
+
+.ListContents th.title-column {
+    width: 30%;
+}
+
+.ListContents th.no-column {
+    width: 10%;
+    white-space: nowrap;
+}
+
+.ListContents th.lineup-column {
+    width: 25%;
+}
+
+.ListContents th.series-column {
+    width: 12%;
+}
+
+.ListContents th.date-column {
+    width: 10%;
+}
+
+.ListContents th.time-column {
+    width: 15%;
+}
+
+.ListContents th.size-column {
+    width: 7%;
+    white-space: nowrap;
+}
+
+.ListContents th.operation-column {
+    width: 10%;
+}
+
+.ListContents th.price-column {
+    width: 8%;
+    white-space: nowrap;
+}
+
+.ListContents th.others-column {
+    width: 8%;
+}
+
+.ListContents th.acount-column {
+    width: 10%;
+    white-space: nowrap;
+}
+
+.ListContents td.NOwrap {
+    white-space: nowrap;
+}
+
+.ListContents .lineup {
+    padding: 3px 6px;
+    background: #666;
+    color: #FFF;
+    margin: 0 3px 5px 3px;
+    white-space: nowrap;
+    line-height: 23px;
+}
+
+.widefat * {
+    word-wrap: break-word;
+}
+
+.widefat th, .widefat td {
+    overflow: hidden;
+}
+
+.ListContents span.draft {
+    color: #000;
+    font-weight: bold;
+    margin: 0 0 0 5px;
+}
+
+.ListContents .state {
+    margin: 0;
+}
+
+.section2 {
+    overflow: hidden;
+    clear: both;
+    line-height: 20px;
+}
+
+.OperationArea {
+    float: left;
+    display: inline;
+    white-space: nowrap;
+    overflow: hidden;
+    margin: 0 0 5px 0;
+}
+
+.OperationArea a.batch {
+    margin: 0 10px 0 8px;
+}
+
+.OperationArea span {
+    margin: 0 0 0 5px;
+    color: #555;
+}
+
+.OperationArea span a {
+    margin: 0 2px;
+}
+
+.OperationArea .SelectArea {
+    white-space: nowrap;
+    padding: 3px 0 0 0;
+    float: left;
+}
+
+.OperationArea select {
+    margin: 0 5px 0 0;
+    border: 1px solid #CCC;
+    border-radius: 4px 4px 4px 4px;
+    border-style: solid;
+    border-width: 1px;
+    padding: 1px;
+}
+
+.PageArea {
+    float: right;
+    display: inline;
+    overflow: hidden;
+    white-space: nowrap;
+    margin: 2px 0 5px 15px;
+}
+
+.PageArea span.info {
+    color: #999;
+    margin: 0 10px 0 0;
+    float: right;
+    display: inline;
+}
+
+.PageArea p {
+    float: right;
+    display: inline;
+}
+
+.PageArea p a {
+    margin: 0 5px;
+}
+
+.PageArea p span {
+    background: #24768c;
+    padding: 5px;
+    color: #FFF;
+    font-weight: bold
+}
+
+/* by wangzhen */
+.btn2 {
+    border: 0 none;
+    float: right;
+    display: inline;
+    background: url(/images/admin/btn_b2_bg.png);
+    width: 55px;
+    height: 26px;
+    line-height: 26px;
+    color: #FFF;
+    text-align: center;
+    cursor: pointer;
+
+}
+
+.btnW2_search {
+    border: 0 none;
+    float: left;
+    color: #000;
+    line-height: 22px;
+    width: 45px;
+    height: 22px;
+    display: block;
+    background: url(/images/admin/btn_w2_bg.png) no-repeat;
+}
+
+.btnW2_search_hover {
+    text-decoration: none;
+    color: #999;
+}
+
+.SearchArea_input {
+    float: left;
+    border: none;
+    background: url(/images/admin/searchbox.jpg) no-repeat;
+    width: 208px;
+    height: 21px;
+    margin: 0 5px 0 0;
+    color: #666;
+    font-family: Arial;
+    padding: 1px 5px;
+    line-height: 22px;
+}
+
+.image_input {
+    border: 2px none;
+    font-size: 12px;
+    height: 22px;
+    margin: 5px 0 0;
+    padding: 2px 3px;
+}
+
+.pagination {
+    float: right;
+}
+
+.pagination  a {
+    margin: 0 5px;
+}
+
+.pagination span.current {
+    background: #24768c;
+    padding: 5px;
+    color: #FFF;
+    font-weight: bold
+}
+
+.Hint {
+    color: #D54E21;
+    padding: 5px 0 10px;
+}
+
+.order_by {
+    color: #D54E21;
+    text-decoration: none;
+}
+
+/* by luu*/
+.SearchArea2 {
+    border-bottom: 1px dotted #EEEEEE;
+    border-top: 1px dotted #EEEEEE;
+    clear: both;
+    margin: 20px 0 0;
+    overflow: hidden;
+    padding: 20px 10px 10px;
+    width: 100%;
+    margin-bottom: 25px;
+}
+
+.SearchArea2 input.typeA {
+    border-color: #E1E1E1;
+    border-radius: 4px 4px 4px 4px;
+    border-style: solid;
+    border-width: 1px;
+    margin: 0 0 0 5px;
+    padding: 1px;
+    width: 120px;
+}
+
+.SearchArea2 select.typeB {
+    border-color: #E1E1E1;
+    border-radius: 4px 4px 4px 4px;
+    border-style: solid;
+    border-width: 1px;
+    margin: 0 5px;
+    padding: 1px;
+}
+
+.SearchArea2 .title {
+    display: inline;
+    float: left;
+    margin: 0 20px 10px 0;
+}
+
+.SearchArea2 .person {
+    display: inline;
+    float: left;
+    margin: 0 20px 10px 0;
+}
+
+.SearchArea2 .time {
+    display: inline;
+    float: left;
+    margin: 0 20px 10px 0;
+    white-space: nowrap;
+}
+
+input.BottomW2 {
+    background: url("/images/admin/btn_w2_bg.png") no-repeat scroll 0 0 transparent;
+    border: medium none;
+    color: #000000;
+    cursor: pointer;
+    height: 22px;
+    line-height: 22px;
+    text-align: center;
+    width: 45px;
+}
+
+.WordsArea {
+    clear: both;
+    margin: 10px 0 0;
+}
+
+.WordsArea p {
+}
+
+.WordsArea textarea {
+    border-color: #E1E1E1;
+    border-radius: 4px 4px 4px 4px;
+    border-style: solid;
+    border-width: 1px;
+    height: 100px;
+    margin: 5px 0 0;
+    padding: 5px;
+    width: 100%;
+}
+
+.WordsArea input {
+    margin: 5px 0 0;
+}
+
+.import_file h3 {
+    color: #666666;
+    font-size: 14px;
+    font-weight: bold;
+    margin: 15px 0 0;
+}
+
+.IncludeArea {
+    clear: both;
+    margin: 10px 0 0;
+}
+.IncludeArea input.ItemA {
+    border-color: #E1E1E1;
+    border-radius: 4px 4px 4px 4px;
+    border-style: solid;
+    border-width: 1px;
+    margin: 0 0 0 5px;
+    padding: 3px;
+    width: 300px;
+}
+.IncludeArea select.ItemB {
+    border-color: #E1E1E1;
+    border-radius: 4px 4px 4px 4px;
+    border-style: solid;
+    border-width: 1px;
+    margin: 0 5px;
+    padding: 1px;
+}
+.IncludeArea input.Btn {
+    float: right;
+    margin: 0 20px 0 0;
+}
+.block {
+    margin: 0 0 15px;
+    white-space: nowrap;
+}
+input.BottomW6 {
+    background: url("/images/admin/btn_w6_bg.png") no-repeat scroll 0 0 transparent;
+    border: medium none;
+    color: #000000;
+    cursor: pointer;
+    height: 22px;
+    line-height: 22px;
+    text-align: center;
+    width: 90px;
+}
+.TextArea {
+    color: #999999;
+    line-height: 20px;
+    padding: 0 10px 0 0;
+    width: 800px;
+}
+.TextArea a {
+    clear: both;
+    margin: 5px 0 0;
+}
+
+#message {
+    padding: 8px;
+    background: none repeat scroll 0 0 #FFFFFF;
+    border: 1px solid #0079C6;
+    overflow: hidden;
+    position: absolute;
+    text-align: center;
+    z-index: 10;
+}
+.SumArea {
+}
+.SumArea dl {
+    clear: both;
+    margin: 10px 0;
+    overflow: hidden;
+    white-space: nowrap;
+}
+.SumArea dl dt {
+    background: none repeat scroll 0 0 #F6F6F6;
+    display: inline;
+    float: left;
+    padding: 15px;
+    text-align: right;
+    white-space: nowrap;
+    width: 100px;
+}
+.SumArea dl dd {
+    color: #888888;
+    display: inline;
+    float: left;
+    padding: 15px;
+}
+h5 {
+    border-bottom: 1px solid #999999;
+    color: #999999;
+    font-size: 14px;
+    font-weight: bold;
+    margin: 20px 0 0;
+    padding: 5px 0;
+}
+.p_sms_content{width:500px;padding:0}
+
+.selectStyle{       margin-top: 5px;   border-color:#E1E1E1;     border-radius:4px 4px 4px 4px;       border-style:solid;      border-width:1px;}
+
+.add_text_field{
+    border-color: #E1E1E1;
+    border-radius: 4px 4px 4px 4px;
+    border-style: solid;
+    border-width: 1px;
+    margin: 0 5px 0 0;
+    float: left;
+    padding: 2px;
+    width: 40px;
+}

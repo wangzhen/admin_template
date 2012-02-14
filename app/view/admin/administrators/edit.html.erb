@@ -1,0 +1,4 @@
+<div id="main">
+    <h2><%= t('labels.edit_manager', :model => Administrator.model_name.human) %></h2>
+  <%= render :partial => '/admin/administrators/form', :locals => {:path => admin_administrator_path( instance_variable_get("@#{controller_name.singularize}"))} %>
+</div>
